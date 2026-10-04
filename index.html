@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="icon" type="image/png" href="images/logo.png">
+<title>Dieu est le plus fort Outfit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;600;800&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#efefef;--bg2:#e2e2e2;--ink:#1c1c1c;--mute:#6a6a6a;--red:#e0302a;--card:#fff;--line:rgba(0,0,0,.14);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e0e0e;--bg2:#191919;--ink:#f2f2f2;--mute:#9b9b9b;--card:#1b1b1b;--line:rgba(255,255,255,.16)}}
+:root[data-theme="dark"]{--bg:#0e0e0e;--bg2:#191919;--ink:#f2f2f2;--mute:#9b9b9b;--card:#1b1b1b;--line:rgba(255,255,255,.16)}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box;margin:0}
+body{background:linear-gradient(var(--bg),var(--bg2) 60%,var(--bg));color:var(--ink);font:400 1rem/1.5 "Inter Tight",system-ui,sans-serif;overflow-x:hidden}
+em{font:italic 400 1.05em "Instrument Serif",Georgia,serif;color:var(--red);letter-spacing:0}
+h1,h2{font-weight:800;letter-spacing:-.045em;line-height:.92}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+#ld{position:fixed;inset:0;background:#0b0b0b;display:grid;place-items:center;z-index:50;transition:opacity .7s,visibility .7s}
+#ld img{width:120px;height:120px;animation:sp 1.4s cubic-bezier(.6,0,.2,1) infinite}
+#ld.off{opacity:0;visibility:hidden}
+@keyframes sp{to{transform:rotateY(360deg)}}
+header{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;z-index:20;display:flex;align-items:center;justify-content:space-between;padding:12px 18px;backdrop-filter:blur(14px);background:color-mix(in srgb,var(--bg) 70%,transparent)}
+header img{width:40px;height:40px;border-radius:50%}
+nav{display:flex;gap:18px;align-items:center;font-weight:600;font-size:.95rem}
+nav a{text-decoration:none}nav .wa{display:none}
+.btn{display:inline-block;background:var(--ink);color:var(--bg);padding:13px 22px;border-radius:99px;font-weight:600;text-decoration:none;border:0;cursor:pointer;font:600 1rem "Inter Tight",sans-serif;transition:transform .25s,background .25s}
+.btn:hover{transform:translateY(-2px);background:var(--red);color:#fff}
+.hero{min-height:100svh;display:grid;align-items:center;padding:96px 20px 40px;gap:0;max-width:1240px;margin:auto;grid-template-columns:1fr}
+.hero h1{font-size:clamp(3.2rem,14vw,9rem)}
+.hero p{max-width:34ch;color:var(--mute);margin:20px 0 26px;font-size:1.1rem}
+.stage{position:relative;height:46svh;min-height:300px}
+#gl{width:100%;height:100%;display:block}
+.stage img{position:absolute;inset:0;margin:auto;width:60%;max-width:300px;display:none}
+.rv{opacity:0;transform:translateY(28px);transition:opacity .9s .15s,transform .9s .15s cubic-bezier(.2,.7,.2,1)}
+body.go .rv{opacity:1;transform:none}
+.mq{overflow:hidden;border-block:1px solid var(--line);padding:16px 0;white-space:nowrap}
+.mq div{display:inline-block;animation:mq 26s linear infinite;font-weight:800;font-size:clamp(1.6rem,5vw,3rem);letter-spacing:-.03em}
+.mq span{margin-right:48px}
+@keyframes mq{to{transform:translateX(-50%)}}
+section{max-width:1240px;margin:auto;padding:84px 20px 0}
+section h2{font-size:clamp(2.4rem,9vw,5.5rem);margin-bottom:26px}
+.chips{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:28px}
+.chip{border:1px solid var(--line);background:transparent;color:var(--ink);padding:10px 20px;border-radius:99px;font:600 .95rem "Inter Tight",sans-serif;cursor:pointer;transition:all .25s}
+.chip[aria-pressed=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;perspective:1000px}
+.card{background:var(--card);border:0;border-radius:22px;padding:0;text-align:left;color:var(--ink);cursor:pointer;overflow:hidden;transform:rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s;box-shadow:0 8px 24px rgba(0,0,0,.08);animation:in .6s both}
+.card:hover{box-shadow:0 22px 46px rgba(0,0,0,.2)}
+@keyframes in{from{opacity:0;transform:scale(.94)}}
+.card img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block}
+.card b{display:block;padding:12px 14px 0;font-weight:800;letter-spacing:-.02em;line-height:1.15}
+.card small{display:block;padding:2px 14px 14px;color:var(--mute)}
+.about{display:grid;gap:24px;align-items:end}
+.about p{font-size:1.25rem;max-width:38ch}
+.look{display:grid;gap:14px;margin-top:34px}
+.look img{width:100%;border-radius:22px;display:block}
+.verse{background:#0e0e0e;color:#f2f2f2;border-radius:28px;margin:84px 14px 0;padding:56px 24px;text-align:center}
+.verse q{display:block;font-size:clamp(1.3rem,4.4vw,2.3rem);font-weight:600;letter-spacing:-.025em;line-height:1.2;max-width:28ch;margin:0 auto 20px;quotes:"« " " »"}
+.verse em{font-size:1.4rem}
+.ct{display:flex;gap:12px;flex-wrap:wrap}
+.ct .btn.o{background:transparent;color:var(--ink);border:1px solid var(--line)}
+footer{text-align:center;color:var(--mute);padding:70px 20px 90px;font-size:.9rem}
+.fab{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:30;background:#25d366;color:#04230f;width:56px;height:56px;border-radius:50%;display:grid;place-items:center;box-shadow:0 10px 26px rgba(0,0,0,.3);transition:transform .25s}
+.fab:hover{transform:scale(1.1) rotate(-6deg)}
+dialog{border:0;border-radius:26px;background:var(--card);color:var(--ink);padding:0;width:min(94vw,820px);max-height:92svh;overflow:auto;margin:auto}
+dialog::backdrop{background:rgba(0,0,0,.6);backdrop-filter:blur(6px)}
+dialog[open]{animation:pop .45s cubic-bezier(.2,.8,.2,1)}
+@keyframes pop{from{opacity:0;transform:translateY(40px) scale(.96)}}
+.md{display:grid}
+.md img{width:100%;max-height:60svh;object-fit:cover;display:block}
+.mi{padding:24px}
+.mi h3{font-size:1.8rem;letter-spacing:-.04em;line-height:1;font-weight:800}
+.mi p{color:var(--mute);margin:8px 0 16px}
+.sz{display:flex;gap:8px;margin:0 0 20px}
+.sz button{width:52px;height:44px;border-radius:12px;border:1px solid var(--line);background:none;color:var(--ink);font:600 1rem "Inter Tight",sans-serif;cursor:pointer}
+.sz button[aria-pressed=true]{background:var(--red);border-color:var(--red);color:#fff}
+.x{position:absolute;right:12px;top:12px;width:40px;height:40px;border-radius:50%;border:0;background:rgba(0,0,0,.6);color:#fff;font-size:1.3rem;cursor:pointer}
+@media(min-width:760px){
+.hero{grid-template-columns:1.1fr .9fr;padding-top:110px}.stage{height:70svh}nav .wa{display:inline-block;padding:10px 18px}
+.grid{grid-template-columns:repeat(4,1fr);gap:20px}.about{grid-template-columns:1.2fr 1fr}.look{grid-template-columns:1fr 1fr}
+.md{grid-template-columns:1fr 1fr}.md img{max-height:none;height:100%}.mi{align-self:center;padding:36px}}
+@media(prefers-reduced-motion:reduce){*{animation-duration:.01s!important;transition-duration:.01s!important}.mq div{animation:none}}
+</style></head><body>
+<div id="ld"><img data-img="logo" alt="Dieu est le plus fort"></div>
+<header><a href="#top" aria-label="Accueil"><img data-img="logo" alt="Logo"></a>
+<nav><a href="#collection">Collection</a><a href="#univers">La marque</a><a class="btn wa" id="hwa" target="_blank" rel="noopener">WhatsApp</a></nav></header>
+<main id="top">
+<div class="hero">
+<div><h1 class="rv">Dieu est<br>le plus <em>fort.</em></h1>
+<p class="rv">Foi visible, force réelle. Des vêtements qui portent un message.</p>
+<a class="btn rv" href="#collection">Voir la collection</a></div>
+<div class="stage rv"><canvas id="gl"></canvas><img data-img="logo" alt="Logo Dieu est le plus fort" id="fb"></div>
+</div>
+<div class="mq" aria-hidden="true"><div id="mq"></div></div>
+<section id="collection"><h2>Ce que nous <em>portons</em></h2>
+<div class="chips" id="chips"></div><div class="grid" id="grid"></div></section>
+<section id="univers"><h2>Qui nous <em>sommes</em></h2>
+<div class="about"><p>Nous sommes une marque née d'une conviction. Pas d'une tendance. Pas d'un effet de mode. Chaque collection a un sens, chaque sortie a une raison : des moments, des saisons, des messages.</p><p>Nous ne créons pas seulement des vêtements. Nous créons des messages à porter.</p></div>
+<div class="look"><img data-img="4401" alt="Pièces Yahweh, ma stabilité sur portant" loading="lazy"><img data-img="4397" alt="Deux modèles portant la collection" loading="lazy"></div></section>
+<div class="verse"><q>N'aie pas peur maintenant, car je suis avec toi. Ne lance pas ces regards inquiets, car ton Dieu, c'est moi.</q><em>Ésaïe 41:10</em></div>
+<section id="contact"><h2>Un article vous <em>plaît ?</em></h2>
+<p style="max-width:40ch;color:var(--mute);margin-bottom:24px">Les prix ne sont pas affichés. Choisissez une pièce, une taille, et écrivez-nous : nous répondons avec le prix et la disponibilité.</p>
+<div class="ct"><a class="btn" id="cwa" target="_blank" rel="noopener">Écrire sur WhatsApp</a><a class="btn o" href="https://www.instagram.com/dieu_est_le_plus_fort" target="_blank" rel="noopener">Instagram @dieu_est_le_plus_fort</a></div></section>
+</main>
+<footer>Dieu est le plus fort Outfit® · Kinshasa · +243 977 643 451 <br>
+<span>Site conçu par Brown, développeur web</span></footer>
+<a class="fab" id="fwa" target="_blank" rel="noopener" aria-label="WhatsApp"><svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.1-1.3A10 10 0 1 0 12 2zm5.2 14c-.2.6-1.300 1.200-1.800 1.200-.5.100-1 .2-3.300-.7-2.800-1.200-4.600-4-4.700-4.200-.1-.2-1.100-1.500-1.100-2.800s.7-2 .9-2.200c.2-.3.500-.3.700-.3h.5c.2 0 .4 0 .6.500l.8 2c.1.200.1.400 0 .5l-.4.600c-.1.200-.3.300-.1.600.2.300.8 1.300 1.700 2.100 1.100 1 2.100 1.300 2.400 1.400.3.100.4.100.6-.1l.8-1c.2-.3.400-.2.600-.1l1.900.9c.3.100.5.200.5.300.1.200.1.800-.1 1.300z"/></svg></a>
+<dialog id="dg"><button class="x" id="cl" aria-label="Fermer">×</button><div class="md"><img id="mimg" alt=""><div class="mi"><h3 id="mt"></h3><p id="ms"></p><div class="sz" id="sz"></div><p>Prix sur demande</p><a class="btn" id="mwa" target="_blank" rel="noopener">Demander le prix</a></div></div></dialog>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+const IMG={"logo": "images/logo.png","4405": "images/img-4405.jpg","4402": "images/img-4402.jpg","4399": "images/img-4399.jpg","4406": "images/img-4406.jpg","4398": "images/img-4398.jpg","4411": "images/img-4411.jpg","4410": "images/img-4410.jpg","4409": "images/img-4409.jpg","4408": "images/img-4408.jpg","4407": "images/img-4407.jpg","4395": "images/img-4395.jpg","4401": "images/img-4401.jpg","4397": "images/img-4397.jpg"},N='243977643451',D='Dieu est le plus fort',Y='Yahweh, ma stabilité';
+const wa=t=>`https://wa.me/${N}?text=${encodeURIComponent(t)}`;
+document.querySelectorAll('[data-img]').forEach(e=>e.src=IMG[e.dataset.img]);
+['hwa','cwa','fwa'].forEach(i=>document.getElementById(i).href=wa('Bonjour, je souhaite avoir des informations sur vos articles.'));
+document.getElementById('mq').innerHTML=('<span>Foi visible, force réelle</span><span>Dieu est le plus fort</span>').repeat(6);
+const P=[['T-shirts',D,'Marine','4405'],['T-shirts',D,'Vert forêt','4402'],['T-shirts',D,'Noir','4399'],['T-shirts',Y,'Marine','4406'],['T-shirts',Y,'Camel','4398'],
+['Sweats',D,'Noir','4411'],['Sweats',Y,'Chocolat','4410'],['Sweats',Y,'Gris chiné','4409'],['Sweats',Y,'Noir','4408'],['Sweats',Y,'Sable','4407'],['Hoodies',D,'Noir','4395']];
+const cats=['Tout','T-shirts','Sweats','Hoodies'],g=document.getElementById('grid'),ch=document.getElementById('chips');
+let cur=null,size='M';
+function draw(c){g.innerHTML='';P.filter(p=>c=='Tout'||p[0]==c).forEach((p,i)=>{const b=document.createElement('button');b.className='card';b.style.animationDelay=i*50+'ms';
+b.innerHTML=`<img src="${IMG[p[3]]}" alt="${p[0].slice(0,-1)} ${p[1]} ${p[2]}" loading="lazy" style="object-position:center ${p[0]=='Hoodies'?'85%':'30%'}"><b>${p[1]}</b><small>${p[0].slice(0,-1)} · ${p[2]}</small>`;
+b.onclick=()=>open(p);b.onpointermove=e=>{const r=b.getBoundingClientRect();b.style.setProperty('--ry',((e.clientX-r.left)/r.width-.5)*10+'deg');b.style.setProperty('--rx',(.5-(e.clientY-r.top)/r.height)*10+'deg')};
+b.onpointerleave=()=>{b.style.removeProperty('--rx');b.style.removeProperty('--ry')};g.append(b)})}
+cats.forEach(c=>{const b=document.createElement('button');b.className='chip';b.textContent=c;b.setAttribute('aria-pressed',c=='Tout');
+b.onclick=()=>{ch.querySelectorAll('.chip').forEach(x=>x.setAttribute('aria-pressed',x==b));draw(c)};ch.append(b)});draw('Tout');
+const dg=document.getElementById('dg'),sz=document.getElementById('sz');
+function link(){document.getElementById('mwa').href=wa(`Bonjour, je suis intéressé par : ${cur[0].slice(0,-1)} « ${cur[1]} » (${cur[2]}), taille ${size}. Pouvez-vous me donner le prix et la disponibilité ?`)}
+function open(p){cur=p;size='M';document.getElementById('mimg').src=IMG[p[3]];document.getElementById('mt').textContent=p[1];
+document.getElementById('ms').textContent=`${p[0].slice(0,-1)} · ${p[2]}`;sz.innerHTML='';
+['M','L','XL','XXL'].forEach(s=>{const b=document.createElement('button');b.textContent=s;b.setAttribute('aria-pressed',s=='M');
+b.onclick=()=>{size=s;sz.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x==b));link()};sz.append(b)});link();dg.showModal()}
+document.getElementById('cl').onclick=()=>dg.close();dg.onclick=e=>{if(e.target==dg)dg.close()};
+const ld=document.getElementById('ld');
+addEventListener('load',()=>setTimeout(()=>{ld.classList.add('off');document.body.classList.add('go')},1500));
+setTimeout(()=>{ld.classList.add('off');document.body.classList.add('go')},4000);
+try{const T=THREE,cv=document.getElementById('gl'),R=new T.WebGLRenderer({canvas:cv,alpha:true,antialias:true});R.outputEncoding=T.sRGBEncoding;R.setPixelRatio(Math.min(devicePixelRatio,2));
+const S=new T.Scene(),C=new T.PerspectiveCamera(32,1,.1,50);C.position.z=7;
+S.add(new T.AmbientLight(0xffffff,.9));const L=new T.DirectionalLight(0xffffff,1.1);L.position.set(3,4,6);S.add(L);
+const tx=new T.TextureLoader().load(IMG.logo);tx.encoding=T.sRGBEncoding;tx.anisotropy=8;
+const coin=new T.Group(),h=.22,rad=1.7;
+const side=new T.Mesh(new T.CylinderGeometry(rad,rad,h,96,1,true),new T.MeshStandardMaterial({color:0xe0302a,metalness:.6,roughness:.3}));side.rotation.x=Math.PI/2;coin.add(side);
+const fm=new T.MeshStandardMaterial({map:tx,roughness:.45,metalness:.1});
+const f=new T.Mesh(new T.CircleGeometry(rad,96),fm);f.position.z=h/2;const b=new T.Mesh(new T.CircleGeometry(rad,96),fm);b.position.z=-h/2;b.rotation.y=Math.PI;coin.add(f,b);S.add(coin);
+let mx=0,my=0,tw=0;addEventListener('pointermove',e=>{mx=e.clientX/innerWidth-.5;my=e.clientY/innerHeight-.5});
+const rs=()=>{const w=cv.clientWidth,hh=cv.clientHeight;R.setSize(w,hh,false);C.aspect=w/hh;C.updateProjectionMatrix()};new ResizeObserver(rs).observe(cv);rs();
+const rm=matchMedia('(prefers-reduced-motion:reduce)').matches;let t=0;
+(function a(){t+=.012;const sc=scrollY/innerHeight;const ty=(rm?0:t*.6)+mx*1.2+sc*Math.PI*1.5,tx2=my*.5;
+coin.rotation.y+=(ty-coin.rotation.y)*.06;coin.rotation.x+=(tx2-coin.rotation.x)*.06;coin.position.y=rm?0:Math.sin(t)*.12;R.render(S,C);requestAnimationFrame(a)})();
+}catch(e){cv.style.display='none';document.getElementById('fb').style.display='block'}
+</script></body></html>
